@@ -1,22 +1,23 @@
-alert("hola a todos");
-//pedir al usario que ingrese su edad
-var nombre=prompt("digite su nombre");
-var edad=prompt("digite su edad");
-console.log(nombre);
-console.log(edad);
+//selectonnar la etiqueta
+var titulo=document.querySelector("h1");
+console.log(titulo);
+//registrar el evento al elemento
+titulo.addEventListener("click",function(){
+    open("https://www.google.com/?hl=fr");
+});
+/* selecionnar el elemento*/
+var parrafomostrar=document.querySelector("p#mostrar");
+var divcontenido=document.querySelector("#contenido");
+console.log(parrafomostrar);
+console.log(divcontenido);
 
-console.log(document.documentURI);
-console.log(document.body);
-console.log(document.head);
-console.log(document.title);
-console.log(document.URL);
-console.log(document.height);
-//esta variable no esta definida
-var pais
-console.log(pais)
-//definir el variable
-var pais="Haiti";
-console.log(pais);
-//cambiar el titulo
-document.title="nuevo titulo";
+
+// registrar el evento 
+parrafomostrar.addEventListener("click",function(){
+    divcontenido.style.display="none";
+    var nombre=prompt("say yur name");
+    //   document.write(`<p>${nombre<p>`});
+    divcontenido.textContent=nombre;
+});
+
 
